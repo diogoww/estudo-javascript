@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeira aula de DOM</title>
+    <style>
+        body {
+            background-color: rgb(224, 191, 255);
+            color: black;
+            font-size: normal 20pt arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>iniciando as aulas de DOM</h1>
+    <p>resultado</p>
+    <p>aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">
+        clique em mim
+    </div>
+    <script>
+        window.document.write('<br>' + 'ola, mundo' + '<br>')
+        window.document.write(window.document.charset + '<br>')
+        window.document.write(window.navigator.appName + '<br>')
+        window.document.write(window.document.URL + '<br>')
+        var p1 = document.getElementsByTagName('p')[0]
+        var p2 = document.getElementsByTagName('p')[1]
+        var d = window.document.getElementById('msg')
+        window.document.write('<br>' + 'esta escrito assim: ' + p1.innerText)
+        // window.alert(p2.innerHTML) 
+        p2.style.color = 'red'
+        d.style.background = 'green'
+        d.innerText = 'messi > cristiano ronaldo'
+        // window.document.getElementById('msg').innerText = 'messi > cristiano ronaldo' comando completo da linha 36
+        
+    </script>
+</body>
+</html>
