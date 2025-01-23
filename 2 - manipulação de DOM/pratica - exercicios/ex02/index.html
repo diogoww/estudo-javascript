@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 2 (iniciante)</title>
+</head>
+<body>
+    <input id="nome" onkeyup="destaque()" placeholder="digite o nome aqui">
+    <ol class="listaNomes">
+        <li>diogo</li>
+        <li>hellen</li>
+        <li>jinx</li>
+        <li>ashe</li>
+        <li>lionel messi</li>
+        <li>kog'maw</li>
+        <li>gato</li>
+    </ol>
+
+    <script>
+        function destaque() {
+            let nome = document.querySelector("#nome")
+            let lista = document.querySelector(".listaNomes")
+            let listaNome = document.querySelectorAll ("li")
+            let listaNova = []
+
+            for (let a=0; a < listaNome.length; a++){
+                let atual = listaNome[a].textContent
+                if (nome.value == atual) {
+                    let li = document.createElement("li")
+                    let strong = document.createElement("strong")
+                    strong.innerText = atual
+                    li.appendChild(strong)
+                    listaNova.push(li)
+                } else {
+                    let li = document.createElement("li")
+                    li.innerText = atual
+                    listaNova.push(li)
+                }
+            }
+            lista.innerText = ""
+            for (let x=0; x<listaNova.length; x++){
+                lista.appendChild(listaNova[x])
+            }
+            console.log(listaNova)
+        }
+    </script>
+</body>
+</html>
