@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 1 (iniciante)</title>
+</head>
+<body>
+    <input id="num" onkeyup="tabuada()" placeholder="digite um numero aqui">
+    <div id="res"></div>
+    <script>
+        function tabuada() {
+            console.log("começando")
+            var num = document.querySelector("#num")
+            var res = document.querySelector("#res")
+            res.innerHTML = ""
+            for (let x=0; x<=10; x++){
+                let div = document.createElement("div")
+                div.innerText = num.value*x
+                res.appendChild(div)
+            }
+        }
+    </script>
+</body>
+</html>
